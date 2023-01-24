@@ -136,7 +136,7 @@ function f2() {
       document.querySelector(".answers").style.display = "none";
       document.querySelector(".quiz-top").style.height = 50 + "px";
 
-      document.querySelector(".analis").style.display = "block";
+      // document.querySelector(".analis").style.display = "block";
     }, 300);
   }
 }
@@ -157,6 +157,7 @@ function f5() {
     document.querySelector(".answers").style.display = "none";
     document.querySelector(".video1").style.display = "none";
     document.querySelector(".hquer").style.display = "none";
+    document.querySelector(".vopros").style.display = "none";
     document.querySelector(".quiz-wrapper").style.display = "block";
     document.querySelector(".quiz-top").style.display = "none";
     // document.querySelector(".quiz-wrapper").style.display = "none";
@@ -180,10 +181,11 @@ function f3() {
 
     document.querySelector(".answers").style.display = "none";
     document.querySelector(".video").style.display = "none";
+    document.querySelector(".vopros").style.display = "none";
     document.querySelector(".processing").style.display = "block";
 
     f4();
-  }, 1000000000);
+  }, 9000000000 * 9000000000);
 }
 
 // let prev = document.querySelector(".arrow1");

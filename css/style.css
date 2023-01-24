@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #fff;
   max-height: 1080px;
   width: 100%;
@@ -37,11 +37,12 @@ h5 {
   left: 0;
 }
 
-.block{
+.block {
   margin-left: auto;
   left: 25%;
 }
-.video, .video1 {
+.video,
+.video1 {
   /* transform: scale(1.2); */
   /* min-width: 100%;
   min-height: 100%; */
@@ -50,13 +51,19 @@ h5 {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: 100%;
   min-height: 100%;
 }
 
 .video1 {
-  position: absolute;
- 
+  z-index: -100;
+  top: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+
   z-index: -100;
   top: 0;
 }
@@ -70,7 +77,6 @@ h5 {
   z-index: -100;
   top: 0;
   display: none;
-
 }
 
 .section1 {
@@ -120,7 +126,8 @@ h5 {
   color: #4b3937;
 }
 
-.start-test, button {
+.start-test,
+button {
   /* display: flex; */
   border: none;
   outline: none;
@@ -132,7 +139,7 @@ h5 {
   /* width: 28%;
   height: 9%; */
   width: 560px;
-height: 93px;
+  height: 93px;
   /* position: absolute; */
   left: 10%;
   top: 65%;
@@ -142,6 +149,7 @@ height: 93px;
   /* box-shadow: inset -0.5px -0.5px 5px 0 rgba(0, 0, 0, 0.5); */
   /* inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5), 0 0 5px rgb(0, 229, 0); */
   animation: pulse2 3s linear infinite;
+  /* margin-top: 114px; */
 }
 
 .start-test:hover {
@@ -196,7 +204,7 @@ height: 93px;
   display: flex;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  /* width: 1878px; */
+  width: 1878px;
   height: 48px;
   font-size: 40px;
   line-height: 48px;
@@ -419,15 +427,11 @@ input:checked + label::after {
   width: 1920px;
   height: 976px;
   margin: 0 auto;
-  background: #ffffff;
+  /* background: #ffffff; */
   position: absolute;
-}
-.quiz-head1{
-
 }
 
 .circle {
-  display: flex;
   width: 100%;
   height: 100%;
   position: relative;
@@ -435,8 +439,7 @@ input:checked + label::after {
 }
 
 .gif {
-  position: fixed;
-  /* z-index: -100; */
+  position: relative;
   width: 679px;
   height: 382px;
   margin: 0 auto;
@@ -471,8 +474,6 @@ input:checked + label::after {
 }
 
 .blank {
-  display: flex;
-  flex-wrap: wrap;
   width: 1479px;
   height: 709px;
   background: #265d87;
@@ -497,13 +498,13 @@ input:checked + label::after {
 
 .result2 {
   background: #fff;
-   width: 99%;
-  height: 45%;;
+  width: 99%;
+  height: 45%;
 }
 
 .result3 {
   background: #fff;
-   width: 99%;
+  width: 99%;
   height: 45%;
 }
 
@@ -534,7 +535,6 @@ input:checked + label::after {
 }
 
 .form-section {
-  display: flex;
   max-height: 419px;
   grid-area: right;
 }
@@ -763,9 +763,10 @@ span {
   text-transform: uppercase;
 
   cursor: pointer;
-  position: absolute;
-  margin-left: 961px;
-  top: 722px;
+  position: relative;
+  left: 837px;
+  bottom: 65px;
+  margin: 0;
 
   color: #4b3937;
 }
@@ -778,20 +779,6 @@ span {
   box-shadow: 0 0 5px #00532b inset;
 }
 
-.quiz-hear {
-  /* display: none; */
-  display: flex;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  /* width: 1878px; */
-  height: 48px;
-  font-size: 40px;
-  line-height: 48px;
-  color: rgba(250, 240, 236, 0.95);
-  padding: 28px 7px 28px 35px;
-  background: #265d87;
-}
-
 .form-section form {
   width: 100%;
   margin: 0 auto;
@@ -799,7 +786,7 @@ span {
 
 .zend {
   /* display: none; */
-  background: #fff;
+  /* background: #fff; */
   position: absolute;
 
   width: 1920px;
@@ -807,7 +794,6 @@ span {
 }
 
 .end-box {
-  display: flex;
   width: 620px;
   height: 709px;
   background: #265d87;
@@ -829,7 +815,7 @@ span {
   line-height: 30px;
   color: #faf0ec;
   margin-top: 66px;
-  margin-left: 31px;
+  margin-left: 32px;
   position: absolute;
 }
 
@@ -924,12 +910,13 @@ span {
     clip-path: inset(0 -1ch 0 0);
   }
 }
-.classic-4 {
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 30px;
-  clip-path: inset(0 3ch 0 0);
-  animation:c4 1s steps(4) infinite;
-}
-@keyframes c4 {to{clip-path: inset(0 -1ch 0 0)}}
 
+.sub {
+  width: 1479px;
+  height: 709px;
+  background: none;
+  position: absolute;
+  border-radius: 20px;
+  top: 91px;
+  margin: auto;
+}
