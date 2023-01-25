@@ -64,7 +64,9 @@ function f1() {
     document.querySelector(".background").style.display = "none";
     document.querySelector(".video1").style.display = "block";
     document.querySelector(".img1").style.display = "none";
+    document.querySelector(".img2").style.display = "none";
     document.querySelector(".arrow1").style.display = "none";
+    document.querySelector(".arrow2").style.display = "none";
     document.querySelector(".hquer").style.display = "none";
     // document.querySelector(".zend").style.display = "none";
     document.querySelector(".submit").style.display = "none";
@@ -103,7 +105,9 @@ function f2() {
       });
       current++;
       document.querySelector(".arrow1").style.display = "block";
+      document.querySelector(".arrow2").style.display = "block";
       document.querySelector(".img1").style.display = "block";
+      document.querySelector(".img2").style.display = "block";
     }, 300);
   } else if (equl == polls.length) {
     setTimeout(() => {
@@ -117,8 +121,6 @@ function f2() {
       progress += 1;
       document.querySelector(".num").textContent = progress + " " + "из 6";
 
-      document.querySelector(".img2").style.display = "none";
-      document.querySelector(".arrow2").style.display = "none";
       document.querySelector(".quiz-wrapper").style.display = "block";
       document.querySelector(".hquer").style.display = "block";
       document.querySelectorAll(".item input").forEach((elem) => {
@@ -155,6 +157,7 @@ function f5() {
     // document.querySelector('#prg').value = progress;
     document.querySelector(".question").style.display = "none";
     document.querySelector(".answers").style.display = "none";
+    document.querySelector(".footer1").style.display = "none";
     document.querySelector(".video1").style.display = "none";
     document.querySelector(".hquer").style.display = "none";
     document.querySelector(".vopros").style.display = "none";
@@ -180,6 +183,7 @@ function f3() {
     // document.querySelector(".myVideo").style.display = "none";
 
     document.querySelector(".answers").style.display = "none";
+    document.querySelector(".footer1").style.display = "none";
     document.querySelector(".video").style.display = "none";
     document.querySelector(".vopros").style.display = "none";
     document.querySelector(".processing").style.display = "block";
@@ -188,22 +192,16 @@ function f3() {
   }, 9000000000 * 9000000000);
 }
 
-// let prev = document.querySelector(".arrow1");
-// let next = document.querySelector(".arrow2");
+let aaa = 0;
 
-// let slideIndex = 0;
+function g1() {
+  for (let i = 0; i < polls.length; i++) {
+    console.log("lool");
+    aaa = polls[i].length;
+  }
+}
 
-// prev = addEventListener("click", () => dasGret(-1));
-// next = addEventListener("click", () => dasGret(1));
-
-// function dasGret(n) {
-//   // console.log(n);
-//   slideIndex += n;
-//   console.log(slideIndex);
-
-//   if (slideIndex < 0) slideIndex = polls.length - 1;
-//   if (slideIndex >= polls.length) slideIndex = 0;
-// }
+document.querySelector(".arrow1").onclick = g1;
 
 function f4() {
   setTimeout(() => {
